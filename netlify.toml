@@ -1,0 +1,26 @@
+# AGBR Opportunity Tool — Netlify site config
+#
+# No build step: index.html is served straight from the repo root, and the
+# functions directory is picked up automatically.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# The tool ships its data inside index.html, so a cached shell means reps are
+# looking at last month's numbers. Always revalidate the HTML; let the icons
+# and manifest cache normally.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
