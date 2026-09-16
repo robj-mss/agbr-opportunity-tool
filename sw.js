@@ -1,88 +1,78 @@
-/*
- * AGBR Opportunity Tool — service worker
+/* AGBR Opportunity Tool — service worker
  *
- * Caching policy is deliberately conservative, because the failure mode that
- * matters here is a rep working last month's gap list without knowing it.
+ * Why this file matters: the previous worker served the app shell from cache
+ * first, so a freshly deployed index.html could sit behind an old cached copy
+ * indefinitely (that is why a newly added line did not appear after deploy).
  *
- *   - The HTML shell is network-first. Online, they always get current data.
- *     Offline, they get the last copy that loaded, so the tool still opens in
- *     a store with no signal.
- *   - /api/* is never cached. Outcome marks must reach the server or visibly
- *     fail; a cached success would be a lie.
- *   - Icons and the manifest are cache-first. They don't change.
+ * Strategy:
+ *   - navigations / HTML : network first, cache only as an offline fallback
+ *   - /api/*             : never cached
+ *   - other static files : cache first, refreshed in the background
+ *
+ * Bump VERSION on any deploy where you want every client's cache dropped.
  */
+var VERSION = "agbr-v5.4.0";
+var STATIC  = VERSION + "-static";
+var SHELL   = "/index.html";
 
-const VERSION = "agbr-v4.1.0";
-const SHELL = `${VERSION}-shell`;
-const ASSETS = `${VERSION}-assets`;
+self.addEventListener("install", function () {
+  self.skipWaiting();
+});
 
-const PRECACHE = ["/", "/index.html", "/manifest.json"];
-
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches
-      .open(SHELL)
-      .then((cache) => cache.addAll(PRECACHE))
-      .then(() => self.skipWaiting())
+self.addEventListener("activate", function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (k) {
+        if (k !== STATIC) return caches.delete(k);
+      }));
+    }).then(function () {
+      return self.clients.claim();
+    })
   );
 });
 
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches
-      .keys()
-      .then((keys) =>
-        Promise.all(
-          keys
-            .filter((k) => !k.startsWith(VERSION))
-            .map((k) => caches.delete(k))
-        )
-      )
-      .then(() => self.clients.claim())
-  );
+self.addEventListener("message", function (e) {
+  if (e.data && e.data.type === "SKIP_WAITING") self.skipWaiting();
 });
 
-self.addEventListener("fetch", (event) => {
-  const { request } = event;
-  if (request.method !== "GET") return;
+self.addEventListener("fetch", function (e) {
+  var req = e.request;
+  if (req.method !== "GET") return;
 
-  const url = new URL(request.url);
+  var url;
+  try { url = new URL(req.url); } catch (err) { return; }
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.indexOf("/api/") === 0) return;   // live data, never cached
 
-  // Never serve target data from cache.
-  if (url.pathname.startsWith("/api/")) return;
+  var accept = req.headers.get("accept") || "";
+  var isPage = req.mode === "navigate" || accept.indexOf("text/html") !== -1;
 
-  const isShell =
-    request.mode === "navigate" ||
-    url.pathname === "/" ||
-    url.pathname === "/index.html";
-
-  if (isShell) {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const copy = response.clone();
-          caches.open(SHELL).then((cache) => cache.put(request, copy));
-          return response;
-        })
-        .catch(() =>
-          caches.match(request).then((hit) => hit || caches.match("/index.html"))
-        )
+  if (isPage) {
+    e.respondWith(
+      fetch(req, { cache: "no-store" }).then(function (fresh) {
+        var copy = fresh.clone();
+        caches.open(STATIC).then(function (c) { c.put(SHELL, copy); });
+        return fresh;
+      }).catch(function () {
+        return caches.open(STATIC).then(function (c) {
+          return c.match(req).then(function (hit) {
+            return hit || c.match(SHELL) || Response.error();
+          });
+        });
+      })
     );
     return;
   }
 
-  event.respondWith(
-    caches.match(request).then(
-      (hit) =>
-        hit ||
-        fetch(request).then((response) => {
-          if (response.ok) {
-            const copy = response.clone();
-            caches.open(ASSETS).then((cache) => cache.put(request, copy));
-          }
-          return response;
-        })
-    )
+  e.respondWith(
+    caches.open(STATIC).then(function (c) {
+      return c.match(req).then(function (hit) {
+        var net = fetch(req).then(function (r) {
+          if (r && r.status === 200 && r.type === "basic") c.put(req, r.clone());
+          return r;
+        }).catch(function () { return null; });
+        return hit || net.then(function (r) { return r || Response.error(); });
+      });
+    })
   );
 });
