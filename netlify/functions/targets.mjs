@@ -10,7 +10,7 @@ import { getStore } from "@netlify/blobs";
  *
  *   {
  *     "506:kh:972630": {
- *        status: "sold" | "declined" | "notstocked" | "working",
+ *        status: "sold" | "declined" | "stocked" | "working"   ("notstocked" = legacy, still accepted),
  *        reason: "<declined reason code, required when status==='declined'>",
  *        note:   "<optional free text>",
  *        ts:     "<ISO timestamp of last write>"
@@ -28,7 +28,9 @@ import { getStore } from "@netlify/blobs";
  *   PUT  /api/targets   body: {period, rep, key, status, reason, note}
  */
 
-const VALID_STATUS = ["sold", "declined", "notstocked", "working"];
+// "stocked" = Already stocked (v5.10). "notstocked" stays valid so older
+// records and any not-yet-refreshed phone can still save.
+const VALID_STATUS = ["sold", "declined", "stocked", "notstocked", "working"];
 
 // Kept in sync with the DECLINE_REASONS list in index.html.
 const VALID_REASONS = [
