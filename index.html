@@ -571,9 +571,9 @@ if ("serviceWorker" in navigator) {
     <img class="mast-logo" src="logos/mss.png" onerror="this.style.display='none'" alt="Mid South Sales">
   </div>
   <div class="masthead-info">
-    <div class="masthead-brand">AG Baton Rouge &middot; Mid South Sales <span onclick="openChangelog()" style="color:#3db8e8;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px;" title="View changelog">&middot; v5.8</span></div>
+    <div class="masthead-brand">AG Baton Rouge &middot; Mid South Sales <span onclick="openChangelog()" style="color:#3db8e8;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px;" title="View changelog">&middot; v5.9</span></div>
     <div class="masthead-title" id="mast-title">AGBR Opportunity Tool</div>
-    <div class="masthead-sub" id="mast-sub">AG Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 134 stores &middot; Internal case value</div>
+    <div class="masthead-sub" id="mast-sub">AG Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 135 stores &middot; Internal case value</div>
   </div>
   <div class="vend-switch">
     <button class="vend-btn" id="btn-all" onclick="switchVendor('all')" style="border-right:2px solid rgba(61,184,232,.4);padding-right:16px;">&#x1F4CA; All Lines</button>
@@ -748,6 +748,12 @@ if ("serviceWorker" in navigator) {
   <div class="modal">
     <h3>&#x1F4DD; Version History</h3>
     <div style="font-size:13px;color:#1a1a2e;line-height:1.5;">
+      <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #e3eaf3;">
+        <div style="font-weight:700;color:#050c1f;">v5.9 <span style="font-weight:400;color:#8ba3cc;font-size:11px;">&middot; Rivers Market Baton Rouge added</span></div>
+        <ul style="margin:6px 0 0 18px;padding:0;color:#3a4a66;">
+          <li><strong>Rivers Market, Baton Rouge (551) added to King&#39;s Hawaiian, Springer Mountain, Reser&#39;s, Rich&#39;s, Cafe Valley, Big Easy and Bar-S.</strong> It was already on BelGioioso. Built from its actual purchases in the weeks ending 10/2&ndash;10/23/2026. It is the former Reeves&#39; Supermarket location (10770 North Harrells Ferry Road), so it takes Reeves&#39; rep, Natasha Palmer, on every line.</li>
+        </ul>
+      </div>
       <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #e3eaf3;">
         <div style="font-weight:700;color:#050c1f;">v5.8 <span style="font-weight:400;color:#8ba3cc;font-size:11px;">&middot; one rep per store</span></div>
         <ul style="margin:6px 0 0 18px;padding:0;color:#3a4a66;">
@@ -974,7 +980,7 @@ function toggleView(){
   renderDashboard();populateStores();renderSkus();renderOverview();
 }
 
-var STORE_DIR={"004":{a:"7355 Highland Road",p:"(225) 767-0074"},"005":{a:"85 Gateway Center Lane",p:"(225) 367-6074"},"006":{a:"2812 Kalurah Street",p:"(225) 343-2361"},"011":{a:"1424 West Airline Highway",p:"(985) 652-9234"},"012":{a:"440 North Third Street",p:"(225) 343-0600"},"019":{a:"12516 Highway 431",p:"(225) 647-4987"},"035":{a:"7201 Winbourne Avenue",p:"(225) 357-1448"},"054":{a:"9620 Florida Boulevard",p:"(225) 927-5450"},"063":{a:"3421 Highway 70",p:"(985) 252-6261"},"107":{a:"581 Saizan Street",p:"(337) 585-6261"},"124":{a:"8115 South Claiborne Avenue",p:"(504) 488-0536"},"128":{a:"5016 West Esplanade",p:"(504) 885-7005"},"129":{a:"801 Harrison Avenue",p:"(504) 293-1201"},"131":{a:"135 Allen Toussaint Boulevard",p:"(504) 282-3428"},"134":{a:"2222 St. Claude Avenue",p:"(504) 262-8888"},"135":{a:"18736 Highway 22",p:"(225) 698-3080"},"137":{a:"6651 Highway One South",p:"(225) 749-7310"},"138":{a:"560 North Alexander Avenue",p:"(225) 344-0574"},"144":{a:"120 Main Street",p:"(337) 229-6386"},"145":{a:"506 Front Street",p:"(985) 385-2620"},"151":{a:"603F West Admiral Doyle Drive",p:"(337) 365-6657"},"152":{a:"143 Gateway Drive",p:"(985) 386-3358"},"154":{a:"19520 Highway 40",p:"(985) 878-0012"},"157":{a:"22610 Highway 190",p:"(985) 902-8345"},"162":{a:"28477 Highway 22",p:"(985) 792-9125"},"164":{a:"419 East Main Street",p:"(225) 638-6340"},"166":{a:"202 South Kibbe Street",p:"(337) 937-8163"},"167":{a:"604 South State Street",p:"(337) 898-1280"},"173":{a:"1620 South Main Street",p:"(337) 394-4005"},"184":{a:"106 East Lincoln Street",p:"(337) 527-6924"},"185":{a:"113 Espasie Street",p:"(337) 856-5650"},"186":{a:"509 Lafayette Street",p:"(337) 856-6889"},"187":{a:"9512 Maurice Ave",p:"(337) 898-3355"},"188":{a:"1410 St. Mary Street",p:"(337) 234-4592"},"198":{a:"148 Central Avenue",p:"(985) 536-2765"},"202":{a:"10770 North Harrells Ferry Road",p:"(225) 925-5371"},"211":{a:"5010 Veterans Boulevard",p:"(504) 887-1150"},"221":{a:"4142 Government Street",p:"(225) 383-7815"},"230":{a:"6431 Hwy 44",p:"(225) 473-1004"},"231":{a:"Hwy 44 & 931",p:"(225) 622-4044"},"233":{a:"58045 Belleview Road",p:"(225) 687-4547"},"240":{a:"1317 Telephone Road",p:"(228) 762-4101"},"247":{a:"18210 West Main Street",p:"(985) 632-7195"},"249":{a:"111 Main Street",p:"(337) 837-6825"},"261":{a:"8611 Highway 71",p:"(337) 623-3434"},"274":{a:"17235 Highway 90",p:"(985) 758-6160"},"284":{a:"909 Westbank Expressway",p:"(504) 347-7333"},"288":{a:"130 Highway 61 South",p:"(601) 888-4671"},"292":{a:"620 Main Street ( Highway 27 )",p:"(337) 762-4632"},"302":{a:"7902 Highway 23",p:"(504) 393-1012"},"303":{a:"9647 Jefferson Highway",p:"(504) 737-8146"},"304":{a:"2904 Severn Avenue",p:"(504) 885-5565"},"307":{a:"388 Central Avenue",p:"(985) 536-2275"},"312":{a:"601 North Arenas Street",p:"(337) 334-3162"},"314":{a:"3209 Highway 1",p:"(985) 787-3141"},"325":{a:"125 East 21st Street",p:"(985) 893-0593"},"335":{a:"22633 Louisiana Highway 22",p:"(225) 695-3030"},"337":{a:"77385 Landry Street",p:"(225) 625-3231"},"342":{a:"7675 Jefferson Highway",p:"(225) 927-2051"},"344":{a:"8389 Highway 190",p:"(225) 637-4812"},"348":{a:"510 Verot School Road",p:"(337) 237-5501"},"354":{a:"950 15th Avenue",p:"(985) 839-4054"},"368":{a:"17750 Highway 182",p:"(337) 578-6035"},"401":{a:"710 Veterans Highway",p:"(504) 834-8216"},"406":{a:"315 East Judge Perez Drive",p:"(504) 262-0750"},"435":{a:"20009 Walker South Road",p:"(225) 698-6368"},"436":{a:"116 West Ascension Street",p:"(225) 647-4571"},"439":{a:"2013 Highway 182",p:"(985) 879-2247"},"444":{a:"44269 Highwy 429",p:"(225) 644-7767"},"445":{a:"18111 Highland Market Drive",p:"(225) 615-7800"},"446":{a:"12513 Highway 73",p:"(225) 673-6504"},"447":{a:"415 St. Christopher St.",p:"(225) 647-3502"},"457":{a:"12342 Cable Bridge Road",p:"(228) 255-3072"},"468":{a:"6360 Louisiana Highway 1",p:"(225) 492-2403"},"496":{a:"9206 Highway 182",p:"(337) 836-9672"},"497":{a:"3914 John Darnell Road Highway 83",p:"(337) 365-2176"},"507":{a:"3233 Magazine Street",p:"(504) 262-6019"},"520":{a:"1519-B Metairie Road",p:"(504) 835-5979"},"521":{a:"3135 Esplanade Avenue",p:"(504) 322-2595"},"522":{a:"2221 Filmore Avenue",p:"(504) 218-7048"},"523":{a:"6735 St. Claude Avenue",p:"(504) 266-2059"},"524":{a:"1133 S. Carrollton Avenue",p:"(504) 766-0972"},"525":{a:"3623 Jefferson Hwy",p:"(504) 503-0900"},"541":{a:"306 Franklin St",p:"(601) 694-2271"},"543":{a:"40 MS-184",p:"(601) 384-5710"},"544":{a:"810 James Street",p:"(601) 583-3441"},"545":{a:"9201 Hwy 67",p:"(225) 683-8287"},"548":{a:"718 Avenue G",p:"(985) 229-8027"},"549":{a:"1023 US 65 Hwy South",p:"(870) 265-3896"},"552":{a:"13413 US HWY 90 SUITE D",p:"(985) 785-2431"},"553":{a:"6525 Airline Hwy",p:"(504) 500-0272"},"554":{a:"217 Apple St",p:"(985) 764-7786"},"556":{a:"13660 Highway 643",p:"(225) 265-7717"},"559":{a:"13572 River Road",p:"(985) 764-9389"},"560":{a:"34019 Walker Road North",p:"(225) 664-7949"},"567":{a:"5452 Live Oak Centre Drive",p:"(225) 635-9817"},"568":{a:"7135 Hwy 61",p:"(225) 635-3497"},"581":{a:"5383 Jones Creek Road",p:"(225) 751-3380"},"585":{a:"100 Cumberland St.",p:"(985) 630-5999"},"593":{a:"29760 Walker South Road",p:"(225) 667-3729"},"594":{a:"29700 S Frost Road",p:"(225) 686-1075"},"596":{a:"31459 Highway 22",p:"(225) 294-5550"},"597":{a:"29186 Highway 43",p:"(225) 209-2162"},"598":{a:"1160 Hatchell Lane",p:"(225) 665-5818"},"599":{a:"8439 Vincent Road",p:"(225) 665-0600"},"601":{a:"3251 Louisiana Highway 3125",p:"(225) 869-4683"},"635":{a:"241 Rees Street",p:"(337) 332-2243"},"636":{a:"1046-C Henderson Highway",p:"(337) 228-7828"},"637":{a:"1101 Grand Point",p:"(337) 332-2184"},"638":{a:"218 South Main",p:"(337) 332-1434"},"657":{a:"5355 Government St",p:"(225) 248-6977"},"658":{a:"13555 Old Hammond Hwy",p:"(225) 272-4876"},"659":{a:"3826 Moss St.",p:"(337) 237-0900"},"662":{a:"5963 Plank Rd.",p:"(225) 355-5153"},"663":{a:"5932 Airline Hwy",p:"(225) 355-0025"},"664":{a:"280 Main St.",p:"(225) 774-5485"},"665":{a:"14485 Greenwell Springs Road",p:"(225) 261-1095"},"667":{a:"304 Place Norman Shopping Center, Highway 90 West",p:"(985) 399-6818"},"668":{a:"35045 Louisiana Highway 16",p:"(225) 243-5309"},"671":{a:"6010 Highway 182 East",p:"(985) 384-5720"},"672":{a:"6307 West Park Avenue",p:"(985) 879-3574"},"674":{a:"130 Edwards Circle",p:"(601) 879-8351"},"675":{a:"215 Hwy 51 North",p:"(601) 265-1527"},"684":{a:"10051 Gulf Highway",p:"(337) 905-3013"},"685":{a:"701 Veterans Drive",p:"(337) 896-6050"},"686":{a:"1051 West Maple",p:"(337) 457-1893"},"687":{a:"901 Tate Cove Road",p:"(337) 363-8062"},"688":{a:"1313 West Veterans Memorial Drive",p:"(337) 643-6492"},"689":{a:"9103 Cameron",p:"(337) 873-6160"},"691":{a:"454 Heyman Boulevard",p:"(337) 235-4114"},"692":{a:"114 Main Street",p:"(337) 754-5722"},"710":{a:"401 West Clayton",p:"(936) 258-3060"}};
+var STORE_DIR={"551":{a:"10770 North Harrells Ferry Road",p:""},"004":{a:"7355 Highland Road",p:"(225) 767-0074"},"005":{a:"85 Gateway Center Lane",p:"(225) 367-6074"},"006":{a:"2812 Kalurah Street",p:"(225) 343-2361"},"011":{a:"1424 West Airline Highway",p:"(985) 652-9234"},"012":{a:"440 North Third Street",p:"(225) 343-0600"},"019":{a:"12516 Highway 431",p:"(225) 647-4987"},"035":{a:"7201 Winbourne Avenue",p:"(225) 357-1448"},"054":{a:"9620 Florida Boulevard",p:"(225) 927-5450"},"063":{a:"3421 Highway 70",p:"(985) 252-6261"},"107":{a:"581 Saizan Street",p:"(337) 585-6261"},"124":{a:"8115 South Claiborne Avenue",p:"(504) 488-0536"},"128":{a:"5016 West Esplanade",p:"(504) 885-7005"},"129":{a:"801 Harrison Avenue",p:"(504) 293-1201"},"131":{a:"135 Allen Toussaint Boulevard",p:"(504) 282-3428"},"134":{a:"2222 St. Claude Avenue",p:"(504) 262-8888"},"135":{a:"18736 Highway 22",p:"(225) 698-3080"},"137":{a:"6651 Highway One South",p:"(225) 749-7310"},"138":{a:"560 North Alexander Avenue",p:"(225) 344-0574"},"144":{a:"120 Main Street",p:"(337) 229-6386"},"145":{a:"506 Front Street",p:"(985) 385-2620"},"151":{a:"603F West Admiral Doyle Drive",p:"(337) 365-6657"},"152":{a:"143 Gateway Drive",p:"(985) 386-3358"},"154":{a:"19520 Highway 40",p:"(985) 878-0012"},"157":{a:"22610 Highway 190",p:"(985) 902-8345"},"162":{a:"28477 Highway 22",p:"(985) 792-9125"},"164":{a:"419 East Main Street",p:"(225) 638-6340"},"166":{a:"202 South Kibbe Street",p:"(337) 937-8163"},"167":{a:"604 South State Street",p:"(337) 898-1280"},"173":{a:"1620 South Main Street",p:"(337) 394-4005"},"184":{a:"106 East Lincoln Street",p:"(337) 527-6924"},"185":{a:"113 Espasie Street",p:"(337) 856-5650"},"186":{a:"509 Lafayette Street",p:"(337) 856-6889"},"187":{a:"9512 Maurice Ave",p:"(337) 898-3355"},"188":{a:"1410 St. Mary Street",p:"(337) 234-4592"},"198":{a:"148 Central Avenue",p:"(985) 536-2765"},"202":{a:"10770 North Harrells Ferry Road",p:"(225) 925-5371"},"211":{a:"5010 Veterans Boulevard",p:"(504) 887-1150"},"221":{a:"4142 Government Street",p:"(225) 383-7815"},"230":{a:"6431 Hwy 44",p:"(225) 473-1004"},"231":{a:"Hwy 44 & 931",p:"(225) 622-4044"},"233":{a:"58045 Belleview Road",p:"(225) 687-4547"},"240":{a:"1317 Telephone Road",p:"(228) 762-4101"},"247":{a:"18210 West Main Street",p:"(985) 632-7195"},"249":{a:"111 Main Street",p:"(337) 837-6825"},"261":{a:"8611 Highway 71",p:"(337) 623-3434"},"274":{a:"17235 Highway 90",p:"(985) 758-6160"},"284":{a:"909 Westbank Expressway",p:"(504) 347-7333"},"288":{a:"130 Highway 61 South",p:"(601) 888-4671"},"292":{a:"620 Main Street ( Highway 27 )",p:"(337) 762-4632"},"302":{a:"7902 Highway 23",p:"(504) 393-1012"},"303":{a:"9647 Jefferson Highway",p:"(504) 737-8146"},"304":{a:"2904 Severn Avenue",p:"(504) 885-5565"},"307":{a:"388 Central Avenue",p:"(985) 536-2275"},"312":{a:"601 North Arenas Street",p:"(337) 334-3162"},"314":{a:"3209 Highway 1",p:"(985) 787-3141"},"325":{a:"125 East 21st Street",p:"(985) 893-0593"},"335":{a:"22633 Louisiana Highway 22",p:"(225) 695-3030"},"337":{a:"77385 Landry Street",p:"(225) 625-3231"},"342":{a:"7675 Jefferson Highway",p:"(225) 927-2051"},"344":{a:"8389 Highway 190",p:"(225) 637-4812"},"348":{a:"510 Verot School Road",p:"(337) 237-5501"},"354":{a:"950 15th Avenue",p:"(985) 839-4054"},"368":{a:"17750 Highway 182",p:"(337) 578-6035"},"401":{a:"710 Veterans Highway",p:"(504) 834-8216"},"406":{a:"315 East Judge Perez Drive",p:"(504) 262-0750"},"435":{a:"20009 Walker South Road",p:"(225) 698-6368"},"436":{a:"116 West Ascension Street",p:"(225) 647-4571"},"439":{a:"2013 Highway 182",p:"(985) 879-2247"},"444":{a:"44269 Highwy 429",p:"(225) 644-7767"},"445":{a:"18111 Highland Market Drive",p:"(225) 615-7800"},"446":{a:"12513 Highway 73",p:"(225) 673-6504"},"447":{a:"415 St. Christopher St.",p:"(225) 647-3502"},"457":{a:"12342 Cable Bridge Road",p:"(228) 255-3072"},"468":{a:"6360 Louisiana Highway 1",p:"(225) 492-2403"},"496":{a:"9206 Highway 182",p:"(337) 836-9672"},"497":{a:"3914 John Darnell Road Highway 83",p:"(337) 365-2176"},"507":{a:"3233 Magazine Street",p:"(504) 262-6019"},"520":{a:"1519-B Metairie Road",p:"(504) 835-5979"},"521":{a:"3135 Esplanade Avenue",p:"(504) 322-2595"},"522":{a:"2221 Filmore Avenue",p:"(504) 218-7048"},"523":{a:"6735 St. Claude Avenue",p:"(504) 266-2059"},"524":{a:"1133 S. Carrollton Avenue",p:"(504) 766-0972"},"525":{a:"3623 Jefferson Hwy",p:"(504) 503-0900"},"541":{a:"306 Franklin St",p:"(601) 694-2271"},"543":{a:"40 MS-184",p:"(601) 384-5710"},"544":{a:"810 James Street",p:"(601) 583-3441"},"545":{a:"9201 Hwy 67",p:"(225) 683-8287"},"548":{a:"718 Avenue G",p:"(985) 229-8027"},"549":{a:"1023 US 65 Hwy South",p:"(870) 265-3896"},"552":{a:"13413 US HWY 90 SUITE D",p:"(985) 785-2431"},"553":{a:"6525 Airline Hwy",p:"(504) 500-0272"},"554":{a:"217 Apple St",p:"(985) 764-7786"},"556":{a:"13660 Highway 643",p:"(225) 265-7717"},"559":{a:"13572 River Road",p:"(985) 764-9389"},"560":{a:"34019 Walker Road North",p:"(225) 664-7949"},"567":{a:"5452 Live Oak Centre Drive",p:"(225) 635-9817"},"568":{a:"7135 Hwy 61",p:"(225) 635-3497"},"581":{a:"5383 Jones Creek Road",p:"(225) 751-3380"},"585":{a:"100 Cumberland St.",p:"(985) 630-5999"},"593":{a:"29760 Walker South Road",p:"(225) 667-3729"},"594":{a:"29700 S Frost Road",p:"(225) 686-1075"},"596":{a:"31459 Highway 22",p:"(225) 294-5550"},"597":{a:"29186 Highway 43",p:"(225) 209-2162"},"598":{a:"1160 Hatchell Lane",p:"(225) 665-5818"},"599":{a:"8439 Vincent Road",p:"(225) 665-0600"},"601":{a:"3251 Louisiana Highway 3125",p:"(225) 869-4683"},"635":{a:"241 Rees Street",p:"(337) 332-2243"},"636":{a:"1046-C Henderson Highway",p:"(337) 228-7828"},"637":{a:"1101 Grand Point",p:"(337) 332-2184"},"638":{a:"218 South Main",p:"(337) 332-1434"},"657":{a:"5355 Government St",p:"(225) 248-6977"},"658":{a:"13555 Old Hammond Hwy",p:"(225) 272-4876"},"659":{a:"3826 Moss St.",p:"(337) 237-0900"},"662":{a:"5963 Plank Rd.",p:"(225) 355-5153"},"663":{a:"5932 Airline Hwy",p:"(225) 355-0025"},"664":{a:"280 Main St.",p:"(225) 774-5485"},"665":{a:"14485 Greenwell Springs Road",p:"(225) 261-1095"},"667":{a:"304 Place Norman Shopping Center, Highway 90 West",p:"(985) 399-6818"},"668":{a:"35045 Louisiana Highway 16",p:"(225) 243-5309"},"671":{a:"6010 Highway 182 East",p:"(985) 384-5720"},"672":{a:"6307 West Park Avenue",p:"(985) 879-3574"},"674":{a:"130 Edwards Circle",p:"(601) 879-8351"},"675":{a:"215 Hwy 51 North",p:"(601) 265-1527"},"684":{a:"10051 Gulf Highway",p:"(337) 905-3013"},"685":{a:"701 Veterans Drive",p:"(337) 896-6050"},"686":{a:"1051 West Maple",p:"(337) 457-1893"},"687":{a:"901 Tate Cove Road",p:"(337) 363-8062"},"688":{a:"1313 West Veterans Memorial Drive",p:"(337) 643-6492"},"689":{a:"9103 Cameron",p:"(337) 873-6160"},"691":{a:"454 Heyman Boulevard",p:"(337) 235-4114"},"692":{a:"114 Main Street",p:"(337) 754-5722"},"710":{a:"401 West Clayton",p:"(936) 258-3060"}};
 
 var KH_SKUS=[
   {id:"972630",desc:"12 oz Original Rolls",wp:35.5,aw:2.3,r4w:29913.15,r4wPrior:35249.26,note:"#1 seller. Every active account should carry this.",isNew:false},
@@ -1128,7 +1134,8 @@ var KH_STORES=[
   {id:"689",name:"Champagne's Duson",city:"Duson",r4:250.06,r4Prior:179.56,w1:89.78,w2:70.5,rep:"Not Assigned",skus:["972630","972632"],isNew:false,obj:["velocity","variety"]},
   {id:"691",name:"Champagne's Lafayette",city:"Lafayette",r4:448.25,r4Prior:226.6,w1:136.36,w2:37.27,rep:"Carla Hicks",skus:["972630","972635","972778","972795","973212","973499","973525"],isNew:false,obj:["space","variety"]},
   {id:"692",name:"Russell's Food Center",city:"Arnaudville",r4:887.82,r4Prior:823.48,w1:179.96,w2:415.52,rep:"Carla Hicks",skus:["972630","972632","972635","972638","972778","972816"],isNew:false,obj:["space","variety"]},
-  {id:"710",name:"Thrif-Tee Food Center",city:"Dayton",r4:594.45,r4Prior:468.16,w1:290.19,w2:106.11,rep:"Not Assigned",skus:["972630","972632","972635","972646","972778","972795"],isNew:true,obj:["variety","space"]}
+  {id:"710",name:"Thrif-Tee Food Center",city:"Dayton",r4:594.45,r4Prior:468.16,w1:290.19,w2:106.11,rep:"Not Assigned",skus:["972630","972632","972635","972646","972778","972795"],isNew:true,obj:["variety","space"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:344.3,r4Prior:0.0,w1:72.7,w2:146.4,rep:"Natasha Palmer",skus:["972630","972632","972635","972638","972795","973212"],isNew:true,obj:["velocity","space"]}
 ];
 
 var FF_SKUS=[
@@ -1244,7 +1251,8 @@ var FF_STORES=[
   {id:"006",name:"Bet-R Store",city:"Baton Rouge",r4:126.36,r4Prior:79.9,w1:0.0,w2:44.75,rep:"Natasha Palmer",skus:["913719"],isNew:true,obj:["variety","velocity"]},
   {id:"019",name:"Delaune's Supermarket",city:"St. Amant",r4:0.0,r4Prior:0.0,w1:0.0,w2:0.0,rep:"Natasha Palmer",skus:["921385"],isNew:true,obj:["variety","velocity"]},
   {id:"107",name:"Bourque's Supermarket",city:"Port Barre",r4:259.72,r4Prior:0.0,w1:0.0,w2:212.69,rep:"Not Assigned",skus:["913719","913700","913732","913741"],isNew:true,obj:["variety","velocity"]},
-  {id:"164",name:"Olinde's Grocery",city:"New Roads",r4:0.0,r4Prior:0.0,w1:0.0,w2:0.0,rep:"Not Assigned",skus:["913719"],isNew:true,obj:["variety","velocity"]}
+  {id:"164",name:"Olinde's Grocery",city:"New Roads",r4:0.0,r4Prior:0.0,w1:0.0,w2:0.0,rep:"Not Assigned",skus:["913719"],isNew:true,obj:["variety","velocity"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:43.28,r4Prior:0.0,w1:43.28,w2:0.0,rep:"Natasha Palmer",skus:["913719"],isNew:true,obj:["velocity","variety"]}
 ];
 
 var KH_OBJ={
@@ -1305,7 +1313,7 @@ var FF_OBJ={
 
 var KH_META={
   name:"King's Hawaiian",emoji:"&#x1F35E;",
-  sub:"AG Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 134 stores",
+  sub:"AG Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 135 stores",
   skus:KH_SKUS,stores:KH_STORES,obj:KH_OBJ,
   netWeeks:[
     {w:"Jan 30",v:18465},{w:"Feb 6",v:26119},{w:"Feb 13",v:20328},{w:"Feb 20",v:16945},
@@ -1327,7 +1335,7 @@ var KH_META={
 
 var FF_META={
   name:"Springer Mountain",emoji:"&#x1F414;",
-  sub:"AG Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 97 stores",
+  sub:"AG Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 98 stores",
   skus:FF_SKUS,stores:FF_STORES,obj:FF_OBJ,
   netWeeks:[
     {w:"Jan 2",v:34786},{w:"Jan 9",v:57467},{w:"Jan 16",v:43431},{w:"Jan 23",v:38053},
@@ -1542,7 +1550,8 @@ var RS_STORES=[
   {id:"005",name:"Matherne\u2019s Market at LSU",city:"Baton Rouge",r4:438.7,r4Prior:300.5,w1:254.37,w2:76.14,rep:"Ryan Stribling",skus:["923168","922552","923218","923084","923427"],isNew:false,obj:["velocity","variety"]},
   {id:"637",name:"Hebert\u2019s 637",city:"Breaux Bridge",r4:122.34,r4Prior:256.62,w1:38.79,w2:40.69,rep:"Not Assigned",skus:["926174","926183","923207"],isNew:false,obj:["space","variety"]},
   {id:"556",name:"Schexnayder\u2019s Supermarket",city:"Vacherie",r4:21.3,r4Prior:21.3,w1:0.0,w2:10.65,rep:"Not Assigned",skus:["926168","947538"],isNew:false,obj:["velocity","variety"]},
-  {id:"337",name:"Buriege, Inc.",city:"Maringouin",r4:178.65,r4Prior:85.78,w1:21.42,w2:91.44,rep:"Not Assigned",skus:["926907","927459","926183"],isNew:false,obj:["velocity","variety"]}
+  {id:"337",name:"Buriege, Inc.",city:"Maringouin",r4:178.65,r4Prior:85.78,w1:21.42,w2:91.44,rep:"Not Assigned",skus:["926907","927459","926183"],isNew:false,obj:["velocity","variety"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:174.54,r4Prior:0.0,w1:21.27,w2:40.65,rep:"Natasha Palmer",skus:["923103","923214","926132","926183","932876"],isNew:true,obj:["velocity","variety"]}
 ];
 
 var RS_OBJ={
@@ -1570,7 +1579,7 @@ var RS_OBJ={
 
 var RS_META={
   name:"Reser's Fine Foods",emoji:"&#x1F957;",
-  sub:"AG Deli Network + Reser's Meat (1111) from 8/21 &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 113 stores",basisNote:"Network dollars from w/e 8/21 include Reser&#x2019;s Fine Food Meat (vendor 1111); earlier weeks are deli (6006) only.",
+  sub:"AG Deli Network + Reser's Meat (1111) from 8/21 &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 114 stores",basisNote:"Network dollars from w/e 8/21 include Reser&#x2019;s Fine Food Meat (vendor 1111); earlier weeks are deli (6006) only.",
   skus:RS_SKUS,stores:RS_STORES,obj:RS_OBJ,
   netWeeks:[
     {w:"May 15",v:37489},{w:"May 22",v:35979},{w:"May 29",v:35478},{w:"Jun 5",v:39295},
@@ -1823,7 +1832,8 @@ RC_STORES=[
   {id:"637",name:"Hebert's 637",city:"Breaux Bridge",r4:380.47,r4Prior:334.32,w1:36.91,w2:85.49,rep:"Not Assigned",skus:["966493","966497","981204","981256","981272","981289","981323","981355","966743","981255","981274","995568"],isNew:false,obj:["space","velocity"]},
   {id:"659",name:"Shoppers Value Moss St",city:"Lafayette",r4:0.0,r4Prior:427.06,w1:0.0,w2:0.0,rep:"Not Assigned",skus:["981204","981256","981274","981374","965435","965453","965468","965479","965493","995568"],isNew:false,obj:["space","velocity"]},
   {id:"261",name:"Stelly's Supermarket",city:"Lebeau",r4:538.3,r4Prior:848.5,w1:100.5,w2:141.62,rep:"Not Assigned",skus:["998790","999105","988855","966056","966377"],isNew:false,obj:["space","velocity"]},
-  {id:"541",name:"Sullivan's New Hebron",city:"New Hebron",r4:411.16,r4Prior:580.44,w1:34.8,w2:124.11,rep:"Donna Willie",skus:["968225","981256","981274","981361","981374","998790","957874","965657","966589","981289","966377","966743","966990","999764"],isNew:false,obj:["space","velocity"]}
+  {id:"541",name:"Sullivan's New Hebron",city:"New Hebron",r4:411.16,r4Prior:580.44,w1:34.8,w2:124.11,rep:"Donna Willie",skus:["968225","981256","981274","981361","981374","998790","957874","965657","966589","981289","966377","966743","966990","999764"],isNew:false,obj:["space","velocity"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:284.14,r4Prior:0.0,w1:106.78,w2:74.21,rep:"Natasha Palmer",skus:["964425","981256","981272","981289","990817","990892","999105","999180"],isNew:true,obj:["variety","velocity"]}
 ];
 
 RC_OBJ={
@@ -1852,7 +1862,7 @@ RC_OBJ={
 
 RC_META={
   name:"Rich's",emoji:"&#x1F382;",
-  sub:"AG Frozen Bakery + Rich's Dry (3629) from 8/21 &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 117 stores",basisNote:"Network dollars from w/e 8/21 include Rich Products Dry (vendor 3629); earlier weeks are frozen (5117) only.",
+  sub:"AG Frozen Bakery + Rich's Dry (3629) from 8/21 &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 118 stores",basisNote:"Network dollars from w/e 8/21 include Rich Products Dry (vendor 3629); earlier weeks are frozen (5117) only.",
   skus:RC_SKUS,stores:RC_STORES,obj:RC_OBJ,
   netWeeks:[
     {w:"May 29",v:131431},{w:"Jun 5",v:127369},{w:"Jun 12",v:94820},{w:"Jun 19",v:112910},
@@ -2025,7 +2035,8 @@ CF_STORES=[
   {id:"221",name:"Calandro's Supermarket",city:"Baton Rouge",r4:129.04,r4Prior:374.64,w1:32.26,w2:96.78,rep:"Natasha Palmer",skus:["993751","993768","993785","993802"],isNew:false,obj:["variety","velocity"]},
   {id:"314",name:"Sureway Supermarket",city:"Grand Isle",r4:54.44,r4Prior:54.02,w1:54.44,w2:0.0,rep:"Not Assigned",skus:["993819","993836"],isNew:false,obj:["variety","velocity"]},
   {id:"348",name:"Earl's Cajun Market",city:"Lafayette",r4:21.47,r4Prior:85.88,w1:0.0,w2:21.47,rep:"Not Assigned",skus:["998058","998065","998068"],isNew:false,obj:["variety","velocity"]},
-  {id:"249",name:"Billeaud's Superette",city:"Broussard",r4:88.12,r4Prior:0.0,w1:44.06,w2:0.0,rep:"Not Assigned",skus:["993819","998071"],isNew:false,obj:["variety","velocity"]}
+  {id:"249",name:"Billeaud's Superette",city:"Broussard",r4:88.12,r4Prior:0.0,w1:44.06,w2:0.0,rep:"Not Assigned",skus:["993819","998071"],isNew:false,obj:["variety","velocity"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:840.25,r4Prior:0.0,w1:19.59,w2:272.19,rep:"Natasha Palmer",skus:["993751","993768","993819","993836","993983","997620","998044","998061","998065","998068","998071","998130","998266","998404"],isNew:true,obj:["variety","velocity"]}
 ];
 
 CF_OBJ={
@@ -2053,7 +2064,7 @@ CF_OBJ={
 
 CF_META={
   name:"Cafe Valley",emoji:"&#x1F9C1;",
-  sub:"AG Packaged Bakery Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 126 stores",
+  sub:"AG Packaged Bakery Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 127 stores",
   skus:CF_SKUS,stores:CF_STORES,obj:CF_OBJ,
   netWeeks:[
     {w:"May 29",v:24271},{w:"Jun 5",v:25783},{w:"Jun 12",v:25476},{w:"Jun 19",v:34558},
@@ -2216,7 +2227,8 @@ var BE_STORES=[
   {id:"689",name:"Champagne's Duson",city:"Duson",r4:790.35,r4Prior:207.78,w1:163.08,w2:184.11,rep:"Not Assigned",skus:["933140","933141","935637","935644","935645","935646","935648","935651","964663","912050","924215","924219","925213","925214","926119","926127","926137","926139","926146","926158","930335","930408","957249","934298","935665"],isNew:false,obj:["velocity"]},
   {id:"691",name:"Champagne's Market",city:"Lafayette",r4:1063.55,r4Prior:1394.02,w1:290.13,w2:227.58,rep:"Carla Hicks",skus:["933140","933141","935637","935644","935645","935646","935648","935651","964663","912050","924215","924219","925213","925214","926119","926127","926137","926139","926146","926158","930335","930408","957249","934298"],isNew:false,obj:["space"]},
   {id:"692",name:"Russell's Food Center",city:"Arnaudville",r4:2212.21,r4Prior:1118.94,w1:703.74,w2:364.95,rep:"Carla Hicks",skus:["933140","933141","935637","935644","935645","935646","935648","935651","964663","912050","924215","924219","925213","925214","926119","926127","926137","926139","926146","926158","930335","930408","957249","934298","935665","935698"],isNew:false,obj:["space"]},
-  {id:"710",name:"Thrif-Tee Food Center",city:"Dayton",r4:1424.13,r4Prior:595.16,w1:332.83,w2:379.96,rep:"Not Assigned",skus:["933140","933141","935637","935644","935645","935646","935648","935651","964663","912050","924215","924219","925213","925214","926119","926127","926137","926139","926146","926158","930335","930408","957249","934298","935698"],isNew:false,obj:["velocity"]}
+  {id:"710",name:"Thrif-Tee Food Center",city:"Dayton",r4:1424.13,r4Prior:595.16,w1:332.83,w2:379.96,rep:"Not Assigned",skus:["933140","933141","935637","935644","935645","935646","935648","935651","964663","912050","924215","924219","925213","925214","926119","926127","926137","926139","926146","926158","930335","930408","957249","934298","935698"],isNew:false,obj:["velocity"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:562.37,r4Prior:0.0,w1:286.63,w2:138.92,rep:"Natasha Palmer",skus:["930335","930408","935637","935648","935651","935665"],isNew:true,obj:["velocity"]}
 ];
 
 var BE_OBJ={
@@ -2247,7 +2259,7 @@ var BE_OBJ={
 
 var BE_META={
   name:"Big Easy",emoji:"&#x1F990;",
-  sub:"AGBR Seafood &amp; Louisiana Foods &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 118 stores",
+  sub:"AGBR Seafood &amp; Louisiana Foods &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 119 stores",
   skus:BE_SKUS,stores:BE_STORES,obj:BE_OBJ,
   netWeeks:[
     {w:"Jun 19",v:48110},{w:"Jun 26",v:87291},{w:"Jul 3",v:73162},{w:"Jul 10",v:47823},
@@ -2413,7 +2425,8 @@ var BS_STORES=[
   {id:"468",name:"Ewings Grocery & Hardware",city:"Batchelor",r4:0.0,rep:"Not Assigned",skus:["934615","929864","934631"],isNew:false,obj:["variety","velocity"]},
   {id:"520",name:"Canseco's Metairie",city:"Metairie",r4:246.39,rep:"Mike Barndt",skus:["934631","934848","929817","934602","934615"],isNew:false,obj:["variety","velocity"]},
   {id:"230",name:"Ralph\u2019s Market (Pelican Point)",city:"Gonzales",r4:103.28,rep:"Not Assigned",skus:["931995","929727","929816","934631"],isNew:false,obj:["variety","velocity"]},
-  {id:"348",name:"Earl's Cajun Market",city:"Lafayette",r4:30.66,rep:"Not Assigned",skus:["929816"],isNew:false,obj:["variety","velocity"]}
+  {id:"348",name:"Earl's Cajun Market",city:"Lafayette",r4:30.66,rep:"Not Assigned",skus:["929816"],isNew:false,obj:["variety","velocity"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:202.33,rep:"Natasha Palmer",skus:["926353","929816","934602","934631"],isNew:true,obj:["variety","velocity"]}
 ];
 
 var BS_OBJ={
@@ -2444,7 +2457,7 @@ var BS_OBJ={
 
 var BS_META={
   name:"Bar-S",emoji:"&#x1F32D;",
-  sub:"AG Meat &amp; Deli Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 116 stores",
+  sub:"AG Meat &amp; Deli Network &middot; 4-wk rate from wks ending 10/2&ndash;10/23/2026 &middot; 117 stores",
   skus:BS_SKUS,stores:BS_STORES,obj:BS_OBJ,
   netWeeks:[
     {w:"Aug 7",v:26846},{w:"Aug 14",v:22192},{w:"Aug 21",v:29072},{w:"Aug 28",v:23046},{w:"Sep 4",v:25023},{w:"Sep 11",v:38493},{w:"Sep 18",v:24851},{w:"Sep 25",v:23836},{w:"Oct 2",v:33463},{w:"Oct 9",v:23139},{w:"Oct 16",v:31757},{w:"Oct 23",v:50309}
@@ -2571,7 +2584,7 @@ var BG_STORES=[
   {id:"019",name:"Delaune's Supermarket",city:"St. Amant",r4:113.4,w1:63.98,w2:24.71,rep:"Natasha Palmer",skus:["947411","947403","947396"],isNew:false,obj:["variety","velocity"]},
   {id:"439",name:"Marcel's Supermarket",city:"Houma",r4:36.49,w1:0.0,w2:0.0,rep:"Carla Hicks",skus:["947407","947403"],isNew:false,obj:["variety","velocity"]},
   {id:"543",name:"Sullivan's Bude",city:"Bude",r4:0.0,w1:0.0,w2:0.0,rep:"Not Assigned",skus:["947411"],isNew:false,obj:["variety","velocity"]},
-  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:158.35,w1:60.9,w2:36.55,rep:"Not Assigned",skus:["947411","947403","948436","948453"],isNew:false,obj:["variety","velocity"]},
+  {id:"551",name:"Rivers Market",city:"Baton Rouge",r4:158.35,w1:60.9,w2:36.55,rep:"Natasha Palmer",skus:["947411","947403","948436","948453"],isNew:false,obj:["variety","velocity"]},
   {id:"185",name:"Nunu's Country Market",city:"Milton",r4:24.48,w1:0.0,w2:0.0,rep:"Not Assigned",skus:["947407"],isNew:false,obj:["variety","velocity"]},
   {id:"445",name:"Alexander's Highland Market",city:"Baton Rouge",r4:0.0,w1:0.0,w2:0.0,rep:"Natasha Palmer",skus:["948546"],isNew:false,obj:["variety","velocity"]},
   {id:"689",name:"Champagne's Duson",city:"Duson",r4:23.76,w1:23.76,w2:0.0,rep:"Not Assigned",skus:["947418"],isNew:false,obj:["variety","velocity"]}
