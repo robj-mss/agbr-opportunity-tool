@@ -11,7 +11,7 @@
  *
  * Bump VERSION on any deploy where you want every client's cache dropped.
  */
-var VERSION = "agbr-v5.11.0";
+var VERSION = "agbr-v5.14.0";
 var STATIC  = VERSION + "-static";
 var SHELL   = "/index.html";
 
